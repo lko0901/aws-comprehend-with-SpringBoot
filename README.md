@@ -7,14 +7,14 @@ AWS의 Translate, Comprehend 서비스를 이용하여 번역 및 감정분석 �
 
 ### Installing
 
-gradle 기반으로 Excutable Jar 생성 후 실행시
+gradle 기반으로 Excutable Jar 생성 후 실행 시 아래 명령어 수행
 
 ```
 ./gradlew bootJar
 java -jar ./build/libs/aws-test-0.0.1-SNAPSHOT.jar
 ```
 
-바로 실행 시킬 때
+바로 실행 시킬 시 아래 명령어 수행
 
 ```
 ./gradlew bootRun
@@ -24,10 +24,6 @@ java -jar ./build/libs/aws-test-0.0.1-SNAPSHOT.jar
 ```
 http://localhost:8080/swagger-ui.html
 ```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
