@@ -32,9 +32,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'com.amazonaws:aws-java-sdk-translate'
     implementation 'com.amazonaws:aws-java-sdk-comprehend'
-
-    compileOnly "io.springfox:springfox-swagger2:${swaggeVersion}"
-    compileOnly "io.springfox:springfox-swagger-ui:${swaggeVersion}"
+    implementation "io.springfox:springfox-swagger2:${swaggeVersion}"
+    implementation "io.springfox:springfox-swagger-ui:${swaggeVersion}"
     
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
