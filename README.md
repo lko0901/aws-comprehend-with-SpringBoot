@@ -3,7 +3,22 @@
 AWS의 Translate, Comprehend 서비스를 이용하여 번역 및 감정분석 기능을 제공하는 Spring Boot 기반의 API Server
 
 ## Getting Started
+### Prerequisites
 
+아래 url 참고하여, aws access key와 secret key 발급
+
+```
+https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/id_credentials_access-keys.html
+```
+발급한 AccessKey와 SecretKey를 application.yml 혹은 application-local.yml 파일을 만들고 아래 내용 추가
+
+```
+cloud:
+  aws:
+    region: ap-southeast-1
+    credentials-accessKey: yourkey
+    credentials-secretKey: yourkey
+```
 
 ### Installing
 
@@ -38,3 +53,6 @@ http://localhost:8080/swagger-ui.html
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## TODO
+batch processing
