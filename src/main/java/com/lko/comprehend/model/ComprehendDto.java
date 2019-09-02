@@ -1,13 +1,12 @@
-package com.lko.awstest.model;
+package com.lko.comprehend.model;
 
-import com.lko.awstest.model.constant.Language;
+import com.lko.comprehend.model.constant.Language;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-public interface TranslateDto {
-
+public interface ComprehendDto {
     @Getter
     @Builder
     @NoArgsConstructor
@@ -23,11 +22,7 @@ public interface TranslateDto {
     @NoArgsConstructor
     @AllArgsConstructor
     class Response {
-        private String message;
-        private String result;
-        private Language from;
-        private Language to;
+        private Request param;
+        private Sentiment result;
     }
-
-
 }

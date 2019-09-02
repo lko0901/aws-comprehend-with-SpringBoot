@@ -1,4 +1,4 @@
-package com.lko.awstest.model.constant;
+package com.lko.comprehend.model.constant;
 
 import lombok.Getter;
 

@@ -1,4 +1,4 @@
-package com.lko.awstest;
+package com.lko.comprehend;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class AwsTestApplicationTests {
+public class ComprehendApiApplicationTests {
 
     @Test
     public void contextLoads() {

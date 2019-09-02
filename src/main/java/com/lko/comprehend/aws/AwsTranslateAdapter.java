@@ -1,4 +1,4 @@
-package com.lko.awstest.aws;
+package com.lko.comprehend.aws;
 
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
@@ -7,8 +7,8 @@ import com.amazonaws.services.translate.AmazonTranslate;
 import com.amazonaws.services.translate.AmazonTranslateClientBuilder;
 import com.amazonaws.services.translate.model.TranslateTextRequest;
 import com.amazonaws.services.translate.model.TranslateTextResult;
-import com.lko.awstest.config.AwsConfig;
-import com.lko.awstest.model.constant.Language;
+import com.lko.comprehend.config.AwsConfig;
+import com.lko.comprehend.model.constant.Language;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;

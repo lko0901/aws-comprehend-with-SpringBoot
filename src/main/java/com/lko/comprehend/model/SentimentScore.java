@@ -1,4 +1,4 @@
-package com.lko.awstest.model;
+package com.lko.comprehend.model;
 
 import io.swagger.annotations.ApiModel;
 import lombok.Builder;

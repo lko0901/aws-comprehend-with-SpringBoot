@@ -1,4 +1,4 @@
-package com.lko.awstest.config;
+package com.lko.comprehend.config;
 
 import lombok.Getter;
 import lombok.Setter;

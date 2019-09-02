@@ -1,24 +1,24 @@
-package com.lko.awstest.service;
+package com.lko.comprehend.service;
 
 import com.amazonaws.services.comprehend.model.DetectSentimentResult;
 import com.amazonaws.services.comprehend.model.SentimentScore;
-import com.lko.awstest.aws.AwsComprehendAdapter;
-import com.lko.awstest.aws.AwsTranslateAdapter;
-import com.lko.awstest.model.ComprehendDto;
-import com.lko.awstest.model.Sentiment;
-import com.lko.awstest.model.TranslateDto;
-import com.lko.awstest.model.constant.Language;
+import com.lko.comprehend.aws.AwsComprehendAdapter;
+import com.lko.comprehend.aws.AwsTranslateAdapter;
+import com.lko.comprehend.model.ComprehendDto;
+import com.lko.comprehend.model.Sentiment;
+import com.lko.comprehend.model.TranslateDto;
+import com.lko.comprehend.model.constant.Language;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @Service
-public class TranslateService {
+public class ComprehendService {
     private final AwsTranslateAdapter awsTranslateAdapter;
     private final AwsComprehendAdapter awsComprehendAdapter;
 
-    public TranslateService(AwsTranslateAdapter awsTranslateAdapter, AwsComprehendAdapter awsComprehendAdapter) {
+    public ComprehendService(AwsTranslateAdapter awsTranslateAdapter, AwsComprehendAdapter awsComprehendAdapter) {
         this.awsTranslateAdapter = awsTranslateAdapter;
         this.awsComprehendAdapter = awsComprehendAdapter;
     }
@@ -93,8 +93,8 @@ class SentimentConverter {
                 .build();
     }
 
-    private static com.lko.awstest.model.SentimentScore sentimentScore(SentimentScore score) {
-        return com.lko.awstest.model.SentimentScore.builder()
+    private static com.lko.comprehend.model.SentimentScore sentimentScore(SentimentScore score) {
+        return com.lko.comprehend.model.SentimentScore.builder()
                 .positive(score.getPositive())
                 .negative(score.getNegative())
                 .neutral(score.getNeutral())

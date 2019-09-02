@@ -1,15 +1,13 @@
-package com.lko.awstest.aws;
+package com.lko.comprehend.aws;
 
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.comprehend.AmazonComprehend;
 import com.amazonaws.services.comprehend.AmazonComprehendClientBuilder;
-import com.amazonaws.services.comprehend.model.DetectSentimentRequest;
-import com.amazonaws.services.comprehend.model.DetectSentimentResult;
-import com.amazonaws.services.comprehend.model.LanguageCode;
-import com.lko.awstest.config.AwsConfig;
-import com.lko.awstest.model.constant.Language;
+import com.amazonaws.services.comprehend.model.*;
+import com.lko.comprehend.config.AwsConfig;
+import com.lko.comprehend.model.constant.Language;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -37,5 +35,12 @@ public class AwsComprehendAdapter {
         request.withText(engMessage)
                 .withLanguageCode(LanguageCode.fromValue(code.getLangCode()));
         return client.detectSentiment(request);
+    }
+
+    public DetectKeyPhrasesResult keyPhrase(String engMessage, Language code) {
+        DetectKeyPhrasesRequest request = new DetectKeyPhrasesRequest();
+        request.withText(engMessage)
+            .withLanguageCode(LanguageCode.fromValue(code.getLangCode()));
+        return client.detectKeyPhrases(request);
     }
 }
