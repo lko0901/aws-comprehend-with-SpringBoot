@@ -1,4 +1,4 @@
-package com.lko.comprehend.aws;
+package com.lko.comprehend.cloud.aws;
 
 import com.lko.comprehend.ComprehendApiApplicationTests;
 import com.lko.comprehend.model.constant.Language;
@@ -10,13 +10,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class AwsTranslateAdapterTest extends ComprehendApiApplicationTests {
 
-    @Autowired
-    private AwsTranslateAdapter awsTranslateAdapter;
+  @Autowired
+  private AwsTranslateAdapter awsTranslateAdapter;
 
-    @Test
-    public void translateToEnglish() {
-        String result = awsTranslateAdapter.translateToEnglish("안녕하세요", Language.KOREAN, Language.ENGLISH);
+  @Test
+  public void translateToEnglish() {
+    String result = awsTranslateAdapter.translateToEnglish("안녕하세요", Language.KOREAN, Language.ENGLISH);
 
-        assertThat(result).isNotEmpty();
-    }
+    assertThat(result).isNotEmpty();
+  }
 }

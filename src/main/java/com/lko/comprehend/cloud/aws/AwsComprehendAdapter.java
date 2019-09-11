@@ -1,4 +1,4 @@
-package com.lko.comprehend.aws;
+package com.lko.comprehend.cloud.aws;
 
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;

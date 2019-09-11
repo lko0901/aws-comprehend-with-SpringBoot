@@ -2,8 +2,8 @@ package com.lko.comprehend.service;
 
 import com.amazonaws.services.comprehend.model.DetectSentimentResult;
 import com.amazonaws.services.comprehend.model.SentimentScore;
-import com.lko.comprehend.aws.AwsComprehendAdapter;
-import com.lko.comprehend.aws.AwsTranslateAdapter;
+import com.lko.comprehend.cloud.aws.AwsComprehendAdapter;
+import com.lko.comprehend.cloud.aws.AwsTranslateAdapter;
 import com.lko.comprehend.model.ComprehendDto;
 import com.lko.comprehend.model.Sentiment;
 import com.lko.comprehend.model.TranslateDto;
